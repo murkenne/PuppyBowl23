@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial, sans-serif';
+  background-color: green;
+}
+
+#all-players-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 16px;
+}
+
+.player-card {
+  background-color: burlywood;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 46px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.player-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.player-card img {
+  max-width: 80%;
+  border-radius: 4px;
+}
+
+.player-card h4 {
+  margin: 8px 0;
+}
+
+.player-card button {
+  margin: 4px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.player-card button:hover {
+  background-color: #1abc9c;
+}
+
+.player-card .delete-button {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.player-card .detail-button {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+#new-player-form {
+  grid-column: span 2;
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 8px;
+  max-width: 80%; 
+}
+
+#new-player-form label {
+  display: block;
+  margin-bottom: 2px; 
+}
+
+#new-player-form input,
+#new-player-form select,
+#new-player-form textarea {
+  width: 100%;
+  padding: 4px; 
+  margin-bottom: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 0.8em;  
+}
+
+#new-player-form button {
+  padding: 6px 12px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#new-player-form button:hover {
+  background-color: #2980b9;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  #all-players-container {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  #new-player-form, .player-card {
+    padding: 6px;
+  }
+  
+  #new-player-form input,
+  #new-player-form select,
+  #new-player-form textarea,
+  .player-card h4,
+  .player-card button {
+    font-size: 0.7em;
+  }
+}
+
+h1 {
+  font-family: 'Arial, sans-serif';
+  color: #2D84F0;
+  text-shadow: 2px 2px 4px #000000;
+  border-bottom: 2px solid #2D84F0;
+  padding: 1em; 
+  text-align: center;
+  background: linear-gradient(135deg, #f0f1f4 25%, #e2e8f0 25%, #e2e8f0 50%, #f0f1f4 50%, #f0f1f4 75%, #e2e8f0 75%, #e2e8f0 100%);
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5em; 
+    text-shadow: 1px 1px 2px #000000; 
+  }
+}
